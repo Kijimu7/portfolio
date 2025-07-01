@@ -1,137 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Copywriting Portfolio | Saori Hunziker</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saori Hunziker | Copywriting Portfolio</title>
   <style>
     :root {
-      --primary: #0073aa;
-      --text: #333;
-      --bg-light: #fafafa;
-      --border: #ddd;
+      --max-width: 960px;
+      --gap: 1.5rem;
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-        "Noto Sans", "Liberation Sans", sans-serif;
-      line-height: 1.6;
-      color: var(--text);
-      background: #fefefe;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+      line-height: 1.5;
     }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem 1rem;
     }
 
     header {
-      background: var(--bg-light);
-      padding: 3rem 1rem 2rem;
       text-align: center;
-      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
     }
 
-    h1 {
-      margin: 0 0 0.5rem;
-      font-size: 2.75rem;
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
     }
 
-    .contact {
-      margin: 0.5rem 0 1rem;
-      font-size: 1rem;
+    header a {
+      color: #0066cc;
+      text-decoration: none;
     }
 
-    .portfolio {
-      padding: 3rem 1rem;
+    header a:hover {
+      text-decoration: underline;
+    }
+
+    .projects {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-      max-width: 1200px;
-      margin: 0 auto;
+      gap: var(--gap);
     }
 
-    .item {
-      width: 300px;
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s;
+    .card {
+      flex: 1 1 calc(33.333% - var(--gap));
+      display: flex;
+      flex-direction: column;
       text-align: center;
-      overflow: hidden;
     }
 
-    .item:hover {
-      transform: translateY(-4px);
+    .card a {
+      display: block;
     }
 
-    .item img {
+    .card img {
       width: 100%;
-      height: 300px;
-      object-fit: cover;
-      border-top-left-radius: 0.5rem;
-      border-top-right-radius: 0.5rem;
+      aspect-ratio: 1/1;          /* keeps images square */
+      object-fit: cover;          /* ensures full coverage */
+      border-radius: 4px;
+      transition: transform 0.3s ease;
     }
 
-    .item h3 {
-      margin: 1rem 0 1.25rem;
-      font-size: 1.25rem;
-      padding: 0 1rem;
+    .card a:hover img {
+      transform: scale(1.05);
     }
 
-    footer {
-      background: var(--bg-light);
-      border-top: 1px solid var(--border);
-      text-align: center;
-      padding: 1.25rem 1rem;
+    .card h3 {
+      margin: 0.75rem 0 0.25rem;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      color: #555;
       font-size: 0.9rem;
+    }
+
+    /* Mobile stacking */
+    @media (max-width: 640px) {
+      .card {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Saori Hunziker</h1>
-    <p class="contact">
-      Email: <a href="mailto:pinkokinawa84@gmail.com">pinkokinawa84@gmail.com</a> |
-      LinkedIn:
-      <a
-        href="https://www.linkedin.com/in/saori-hunziker/"
-        target="_blank"
-        rel="noopener"
-        >Saori Hunziker</a
-      >
-    </p>
-    <p>Copywriting Portfolio</p>
-  </header>
+  <div class="container">
+    <header>
+      <h1>Saori Hunziker</h1>
+      <a href="mailto:pinkokinawa84@gmail.com">pinkokinawa84@gmail.com</a>
+    </header>
 
-  <section class="portfolio">
-    <a href="https://kijimu7.github.io/amazonprimemockup/" class="item" target="_blank" rel="noopener">
-      <img src="https://github.com/Kijimu7/portfolio/blob/main/Screenshot%202025-06-30%20221630.png" alt="Amazon prime student mock up" />
-      <h3>Project Title 1</h3>
-    </a>
+    <section class="projects" aria-label="Portfolio projects">
 
-    <a href="https://example.com/project2" class="item" target="_blank" rel="noopener">
-      <img src="thumbnail2.jpg" alt="Project 2 thumbnail" />
-      <h3>Project Title 2</h3>
-    </a>
+      <article class="card">
+        <a href="PLACEHOLDER_URL" target="_blank" rel="noopener">
+          <img src="https://github.com/Kijimu7/portfolio/blob/main/Screenshot%202025-06-30%20221630.png" alt="Thumbnail for Project One">
+        </a>
+        <h3>Project One</h3>
+        <p>A concise description of your first project goes here.</p>
+      </article>
 
-    <a href="https://example.com/project3" class="item" target="_blank" rel="noopener">
-      <img src="thumbnail3.jpg" alt="Project 3 thumbnail" />
-      <h3>Project Title 3</h3>
-    </a>
-  </section>
+      <article class="card">
+        <a href="PLACEHOLDER_URL" target="_blank" rel="noopener">
+          <img src="https://via.placeholder.com/600" alt="Thumbnail for Project Two">
+        </a>
+        <h3>Project Two</h3>
+        <p>A concise description of your second project goes here.</p>
+      </article>
 
-  <footer>&copy; 2025 Saori Hunziker. All rights reserved.</footer>
+      <article class="card">
+        <a href="PLACEHOLDER_URL" target="_blank" rel="noopener">
+          <img src="https://via.placeholder.com/600" alt="Thumbnail for Project Three">
+        </a>
+        <h3>Project Three</h3>
+        <p>A concise description of your third project goes here.</p>
+      </article>
+
+    </section>
+  </div>
 </body>
 </html>
