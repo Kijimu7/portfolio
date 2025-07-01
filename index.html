@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Prime Student | Japan</title>
+    <style>
+      /* --- Base Reset & Layout ------------------------------------------------ */
+      *,
+      *::before,
+      *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        color: #131921;
+        /* Light‑blue background like Amazon JP student page */
+        background-color: #eaf6ff;
+      }
+      img { max-width: 100%; height: auto; display: block; }
+      a { text-decoration: none; color: inherit; }
+
+      /* --- Utility ------------------------------------------------------------ */
+      .container { width: min(90%, 60rem); margin-inline: auto; padding-block: 2rem; }
+      .cta {
+        display: inline-block; background-color: #ff9900; color: #fff;
+        font-weight: 700; padding: 0.9rem 2.4rem; border-radius: 2rem;
+        margin-top: 1.5rem; transition: background-color 0.25s ease; }
+      .cta:hover { background-color: #ec8200; }
+
+      /* --- Sections ----------------------------------------------------------- */
+      header.hero {
+        /* Updated hero background to use supplied image (smiling student montage) */
+        background: linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01)),
+          url("https://private-user-images.githubusercontent.com/31402838/460843430-a000151f-da7c-42af-8401-28c2781602f7.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEzNDA1NjEsIm5iZiI6MTc1MTM0MDI2MSwicGF0aCI6Ii8zMTQwMjgzOC80NjA4NDM0MzAtYTAwMDE1MWYtZGE3Yy00MmFmLTg0MDEtMjhjMjc4MTYwMmY3LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA3MDElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNzAxVDAzMjQyMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTVhMWZkYzZkOWVlOTNiNTA0NWRkYjQwZjdmYzAwNGI1OTcwNWFjMzE2YmFmNTQ4ZDg1MzcxOTFiMTBmNjU0N2QmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.2p_3dC0k5F-3qYHhP3bEbu3ZWvaThQZ5Z9suMfeaTHw") center / cover no-repeat;
+        color: #fff; text-align: center; padding: 6rem 1.25rem 8rem;
+      }
+      header.hero h1 {
+        font-size: clamp(1.8rem, 5vw + 1rem, 3.4rem);
+        font-weight: 800;
+        margin-top: 10rem;
+      }
+      header.hero p {
+        font-size: clamp(1rem, 2vw + 0.8rem, 1.4rem);
+        margin-top: 1.2rem;
+        text-align: right;
+        margin-right: 5vw;
+      }
+
+      section { padding-block: 4rem; }
+      section:nth-of-type(even) { background-color: #f6f9f9; }
+      section h2, section h3 {
+        font-size: 1.8rem; font-weight: 700; margin-bottom: 1.6rem; text-align: center; }
+      .why ul { list-style: none; display: grid; gap: 1.2rem; }
+      .why li { display: flex; align-items: flex-start; gap: 0.8rem; font-size: 1.1rem; }
+      .why li::before { content: "✅"; }
+
+      .balance p { text-align: center; font-size: 1.1rem; }
+      .promo p { font-size: 1.1rem; text-align: center; margin-block: 0.5rem; }
+      .testimonials blockquote {
+        border-left: 4px solid #ff9900; padding-left: 1rem; margin-bottom: 1.5rem;
+        font-style: italic; font-size: 1.05rem; max-width: 40rem; margin-inline: auto; color: #444; }
+
+      footer.cta-footer { background-color: #232f3e; color: #fff; text-align: center; padding: 3.5rem 1.25rem; }
+      footer.cta-footer h2 { font-size: 1.8rem; font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <!-- Hero -------------------------------------------------------------- -->
+    <header class="hero">
+      <h1>勉強も、買い物も、エンタメも、プライムでスマートに。</h1>
+      <p>学生限定、最初の6か月無料。その後も月額たったの250円。</p>
+      <a href="#" class="cta">6か月無料体験を始める</a>
+    </header>
+
+    <!-- Why Prime Student -------------------------------------------------- -->
+    <section class="why container">
+  <h2>学生のための、特別なプライム。</h2>
+  <ul>
+    <li>教科書・日用品の無料・迅速配送</li>
+    <li>Prime Videoでアニメや映画が見放題</li>
+    <li>学生だけの限定セールあり</li>
+    <li>ノートパソコン・文房具などの特別割引</li>
+  </ul>
+</section>
+
+    <!-- Balance ------------------------------------------------------------ -->
+    <section class="balance container">
+      <h3>勉強も休憩も、Prime Studentがサポート。</h3>
+      <p>Save on study tools. Unwind with your favorite shows. Prime Student fits your lifestyle.</p>
+    </section>
+
+    <!-- Promo -------------------------------------------------------------- -->
+    <section class="promo container">
+      <h2>💥 今だけ、最大限お得に！</h2>
+      <p>最大50%オフの学生限定セール</p>
+      <p>新学期スタートパック特集</p>
+      <p>新作アニメ先行配信中！</p>
+    </section>
+
+    <!-- Testimonials ------------------------------------------------------- -->
+    <section class="testimonials container">
+      <blockquote>「毎学期、教科書が安く手に入って助かってます！」 — 大学生（2年生）</blockquote>
+      <blockquote>「授業の後にアニメを観るのが癒しタイムです。」 — 専門学校生</blockquote>
+    </section>
+
+    <!-- CTA Footer --------------------------------------------------------- -->
+    <footer class="cta-footer">
+      <h2>今すぐ無料体験を始めよう。</h2>
+      <a href="#" class="cta">6か月無料体験をはじめる</a>
+    </footer>
+  </body>
+</html>
